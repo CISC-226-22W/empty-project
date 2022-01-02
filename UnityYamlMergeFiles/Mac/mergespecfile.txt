@@ -12,15 +12,15 @@
 # On Windows %programs% is replaced with "C:\Program Files" and "C:\Program Files (x86)" there by resulting in two entries to try out
 # On OSX %programs% is replaced with "/Applications" and "$HOME/Applications" thereby resulting in two entries to try out
 
-unity use "/Applications/kdiff3.app/Contents/MacOS/kdiff3" "%b" "%r" "%l" -o "%d" --L1 base --L2 remote --L3 local
-prefab use "/Applications/kdiff3.app/Contents/MacOS/kdiff3" "%b" "%r" "%l" -o "%d" --L1 base --L2 remote --L3 local
+unity use "/Applications/kdiff3.app/Contents/MacOS/kdiff3" "%b" "%r" "%l" -o "%d" --L1 base --L2 local --L3 remote
+prefab use "/Applications/kdiff3.app/Contents/MacOS/kdiff3" "%b" "%r" "%l" -o "%d" --L1 base --L2 local --L3 remote
 
 #
 # Default fallbacks for unknown files. First tool found is used.
 #
 
 # kdiff3
-* use "/Applications/kdiff3.app/Contents/MacOS/kdiff3" "%b" "%r" "%l" -o "%d" --L1 base --L2 remote --L3 local
+* use "/Applications/kdiff3.app/Contents/MacOS/kdiff3" "%b" "%r" "%l" -o "%d" --L1 base --L2 local --L3 remote
 
 # Apple File Merge
 * use "/usr/bin/opendiff" %r %l -ancestor %b -merge %d
